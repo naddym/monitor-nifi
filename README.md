@@ -1,15 +1,16 @@
 # Monitor NiFi Health And Send Email Alerts
 
-    Python Scripts are desgined to monitor health of NiFi cluster running which capturing 
-        1. JVM Memory, 
+    Python Scripts are desgined to monitor health of NiFi cluster running which captures 
+        1. JVM Memory
         2. Three repositories -> FlowFile, Content and Provenance
         3. Processor component throughput
         4. Cluster centric node monitoring
     
-    These Scripts are executed based on time-based scheduling say for x hours,minutes or seconds. Whenever there is a change in behaviour
-    such as increasing memory, disk space, scaling down of nodes from the cluster or components have encountered an error,warning etc.. ,
-    An Email Notification is sent to the respective person ( say admin ). These emails are continously triggered on hourly basis 
-    until the NIFI cluster gets back to stable state.
+    These Scripts are executed on time-based scheduling (CRON - x hours,minutes or seconds ). Email Notification is sent when there is
+    1. Increase in heap
+    2. Increase in disk space
+    3. Nodes getting DISCONNECTED from the cluster
+    4. Components running bullentins errors, warnings
     
 ## Summary
 
