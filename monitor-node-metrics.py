@@ -16,7 +16,7 @@ URL = "http://localhost:8080/nifi-api"
 
 def printDiagnostics(jdata):
         filename = "nifi-node-diagnostics.csv"
-        file_path = "/home/ubuntu/performance/logs-gelegua/"
+        file_path = "/home/ubuntu/performance/logs-nifi/"
         if os.path.exists(file_path+filename):
                 append_write = 'ab'
         else:
@@ -50,7 +50,7 @@ def printDiagnostics(jdata):
         f.close()
         for node in jdata['systemDiagnostics']['nodeSnapshots']:
                 filename = "nifi-node-diagnostics.csv"
-                file_path = "/home/ubuntu/performance/logs-gelegua/"
+                file_path = "/home/ubuntu/performance/logs-nifi/"
                 if os.path.exists(file_path+filename):
                         append_write = 'ab'
                 else:
